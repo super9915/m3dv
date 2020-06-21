@@ -23,7 +23,7 @@ test_dataset = ClfSegTestDataset(crop_size=crop_size, move=None)
 test_loader = get_loader_inorder(test_dataset, batch_size=1)
 
 model = densesharp.get_compiled()
-model.load_weights('./tmp/test/best12.h5')
+model.load_weights('./tmp/test/best.h5')
 
 pred = model.predict_generator(generator=test_loader, steps=len(test_dataset), verbose=1)
 
